@@ -1,0 +1,70 @@
+version: 2.1
+
+executors:
+  my-executor:
+    docker:
+      - image: circleci/openjdk:8-jdk-node
+    working_directory: ~/workspace
+
+jobs:
+  build:
+    executor: my-executor
+
+    environment:
+      MAVEN_OPTS: -Xmx3200m
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: circleci-{{ checksum "pom.xml" }}
+
+      - run:
+          name: Get the dependencies
+          command: mvn dependency:go-offline
+
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: circleci-{{ checksum "pom.xml" }}
+
+      - run:
+          name: Compile, test and package the project
+          command: mvn clean package
+          
+      - store_artifacts:
+          path: target/pictobot-dev.jar
+
+      - persist_to_workspace:
+          root: ~/workspace
+          paths:
+            - target
+            - serverless.yml
+
+  deploy:
+    executor: my-executor
+
+    steps:
+      - attach_workspace:
+            at: ~/workspace
+
+      - run:
+          name: Install Serverless CLI and dependencies
+          command: sudo npm i -g serverless
+          
+      - run:
+          name: Deploy project
+          command: serverless deploy
+
+workflows:
+  version: 2
+
+  build_test_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
