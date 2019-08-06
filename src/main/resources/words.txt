@@ -93,8 +93,65 @@ Etoile
 Satellite
 Vaisseau Spatial
 Eau
-Feau
+Feu
 Air
 Oxygène
 Tableau blanc
 Ordinateur
+Télécommande
+Bouteille
+Argent
+Etranger
+Pays
+Ville
+Moyen-âge
+Steampunk
+Futur
+Passé
+Présent
+Ajouter
+Réduire
+Multiplier
+Diviser
+Robot
+Humain
+Enfant
+Compte bancaire
+Banque
+Tribunal
+Police
+Pompier
+Joie
+Colère
+Ambition
+Testeur
+Conférence
+Gâteau
+Anniversaire
+Naissance
+Décès
+Artiste
+Peintre
+Magicien
+Médecien
+Infirmier
+Voleur
+Crayon
+Stylo
+Tablette tactile
+Planifier
+Organiser
+Cloud
+In Premise
+Rechercher
+Trouver
+Basketball
+Natation
+Danse
+Orage
+Pluie
+Soleil
+Neige
+Courrier
+Lettre
+Mot
