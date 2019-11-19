@@ -155,3 +155,17 @@ Neige
 Courrier
 Lettre
 Mot
+Tasse
+Café
+Discussion
+Présentation
+Radeau
+Bateau
+Slack
+Chatbot
+Monnaie
+XKE
+Management visuel
+IoT
+ADR
+Conteneur
