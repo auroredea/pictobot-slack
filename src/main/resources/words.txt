@@ -133,7 +133,7 @@ Décès
 Artiste
 Peintre
 Magicien
-Médecien
+Médecin
 Infirmier
 Voleur
 Crayon
@@ -178,4 +178,10 @@ Voilier
 Marin
 Apprendre
 Ecouter
-
+Grève
+Noël
+Chandeleur
+Nouvel an
+Fête du travail
+Linux
+Windows
