@@ -39,7 +39,7 @@ class Handler:RequestHandler<Map<String, Any>, String> {
 
         val message = Message.builder(
                 """
-            Picto du jour !
+            Picto de la semaine !
 
             *$wordOfDay* - 20 secondes - ✏ à poster dans <#$channel>
         """.trimIndent()
